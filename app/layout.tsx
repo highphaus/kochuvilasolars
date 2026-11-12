@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     "solar panel installation",
   ],
   authors: [{ name: "Kochuvila Solars" }],
+  icons: {
+    icon: "/logo/kochuvila-logo.png",
+    shortcut: "/logo/kochuvila-logo.png",
+    apple: "/logo/kochuvila-logo.png",
+  },
   openGraph: {
     title: "Kochuvila Solars — Sunlight Today. Savings Tomorrow.",
     description:
