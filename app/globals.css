@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --ice-blue: #F0F8FF;
+  --soft-blue: #E4F2FC;
+  --pale-blue: #D6EAF8;
+  --white: #FFFFFF;
+  --primary-blue: #2878B5;
+  --primary-blue-hover: #1f659a;
+  --deep-blue: #163B5C;
+  --navy: #102D46;
+  --muted-blue: #58758E;
+  --border-blue: #D8E7F3;
+  --soft-green: #E8F3EC;
+  --success-green: #34815B;
+  
+  --background: #F0F8FF;
+  --foreground: #102D46;
+}
+
+@theme {
+  --color-ice-blue: #F0F8FF;
+  --color-soft-blue: #E4F2FC;
+  --color-pale-blue: #D6EAF8;
+  --color-brand-primary: #2878B5;
+  --color-brand-deep: #163B5C;
+  --color-brand-navy: #102D46;
+  --color-brand-muted: #58758E;
+  --color-brand-border: #D8E7F3;
+  --color-soft-green: #E8F3EC;
+  --color-success-green: #34815B;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F0F8FF;
+}
+
+body {
+  background-color: #F0F8FF;
+  color: var(--navy);
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  overflow-x: hidden;
+}
+
+/* Custom handwriting accent */
+.font-handwriting {
+  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive;
+  letter-spacing: 0.02em;
+}
+
+/* Hero organic curve swoosh */
+.hero-curve-mask {
+  clip-path: ellipse(120% 100% at 85% 50%);
+}
+
+@media (max-width: 1024px) {
+  .hero-curve-mask {
+    clip-path: none;
+  }
+}
+
+/* Subtle card & border styles */
+.solar-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D8E7F3;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solar-card:hover {
+  border-color: #B9D7F0;
+  box-shadow: 0 12px 30px -10px rgba(40, 120, 181, 0.12);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F8FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #B9D7F0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2878B5;
+}
