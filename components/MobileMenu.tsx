@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { X, Phone, Mail, MapPin, ArrowRight, Sun, ShieldCheck } from "lucide-react";
+import { X, Phone, Mail, MapPin, ArrowRight, ShieldCheck } from "lucide-react";
 import Logo from "./Logo";
 
 interface MobileMenuProps {

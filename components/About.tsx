@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, Cpu, Users, Wrench, ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface AboutProps {
   onOpenQuote: () => void;
@@ -11,22 +11,18 @@ interface AboutProps {
 export default function About({ onOpenQuote }: AboutProps) {
   const strengths = [
     {
-      icon: Users,
       title: "In-House Engineering Team",
       desc: "Zero outsourced subcontractors. Every system is planned, wired, and tested by certified solar engineers.",
     },
     {
-      icon: ShieldCheck,
       title: "25-Year Performance Warranty",
       desc: "Guaranteed minimum 84.8% power output at Year 25 with comprehensive product coverage.",
     },
     {
-      icon: Cpu,
       title: "Smart Cloud Telemetry",
       desc: "Live generation tracking on your smartphone with automated inverter health alerts.",
     },
     {
-      icon: Wrench,
       title: "Turnkey Net-Metering Liaison",
       desc: "Complete documentation, safety inspections, and DISCOM meter replacement managed for you.",
     },
@@ -50,9 +46,7 @@ export default function About({ onOpenQuote }: AboutProps) {
 
               {/* Floating Engineering Excellence Badge */}
               <div className="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-[#D8E7F3] shadow-md flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-[#E8F3EC] flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-6 h-6 text-[#34815B]" />
-                </div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#168052] shrink-0 animate-pulse" />
                 <div>
                   <div className="text-xs uppercase tracking-wider font-bold text-[#58758E]">
                     MNRE Certified
@@ -83,15 +77,12 @@ export default function About({ onOpenQuote }: AboutProps) {
             {/* Strengths Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
               {strengths.map((item, idx) => {
-                const Icon = item.icon;
                 return (
                   <div
                     key={idx}
                     className="p-4 rounded-xl bg-[#F0F8FF] border border-[#D8E7F3]/70 hover:border-[#2878B5]/50 transition-colors"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center mb-3 shadow-2xs">
-                      <Icon className="w-4 h-4 text-[#2878B5]" />
-                    </div>
+                    <div className="w-6 h-1 rounded-full bg-[#0F67B1] mb-3" />
                     <h3 className="text-sm font-bold text-[#163B5C] mb-1">{item.title}</h3>
                     <p className="text-xs text-[#58758E] leading-relaxed">{item.desc}</p>
                   </div>

@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit, Caveat } from "next/font/google";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -49,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${caveat.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-[#F0F8FF] text-[#102D46] antialiased selection:bg-[#2878B5] selection:text-white">
+    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} ${caveat.variable} scroll-smooth`}>
+      <body className="min-h-screen bg-[#F5F9FD] text-[#0C233C] antialiased selection:bg-[#0F67B1] selection:text-white">
         {children}
       </body>
     </html>

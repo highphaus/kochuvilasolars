@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Home, Building2, Factory, Droplets, ArrowRight, CheckCircle2, ChevronRight, X } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight, X } from "lucide-react";
 
 interface ServiceItem {
   id: string;
-  icon: React.ElementType;
+  number: string;
   title: string;
   shortDesc: string;
   fullDesc: string;
@@ -18,7 +18,7 @@ interface ServiceItem {
 const servicesData: ServiceItem[] = [
   {
     id: "residential",
-    icon: Home,
+    number: "01",
     title: "Residential Solar",
     shortDesc: "Power your home with clean, renewable energy.",
     fullDesc:
@@ -35,7 +35,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     id: "commercial",
-    icon: Building2,
+    number: "02",
     title: "Commercial Solar",
     shortDesc: "Reduce operational costs and increase sustainability.",
     fullDesc:
@@ -52,7 +52,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     id: "industrial",
-    icon: Factory,
+    number: "03",
     title: "Industrial Solar",
     shortDesc: "Power your business for a brighter future.",
     fullDesc:
@@ -69,7 +69,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     id: "water-heating",
-    icon: Droplets,
+    number: "04",
     title: "Solar Water Heating",
     shortDesc: "Hot water, naturally.",
     fullDesc:
@@ -100,53 +100,56 @@ export default function Services({ onOpenQuote }: ServicesProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
           {/* Left Column: Heading & Description */}
           <div className="lg:col-span-5">
-            <div className="text-[12px] font-bold tracking-[0.2em] text-[#2878B5] uppercase mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F1FC] text-[#0F67B1] text-[11.5px] font-bold tracking-[0.18em] uppercase mb-4">
               Our Solutions
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#163B5C] tracking-tight leading-[1.18] mb-5">
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0C233C] tracking-tight leading-[1.15] mb-5">
               Smart Solar Solutions
               <br />
               for Every Space
             </h2>
-            <p className="text-[16px] text-[#58758E] leading-relaxed mb-6">
+            <p className="text-[16px] text-[#4A657D] leading-relaxed mb-7">
               From homes to large-scale commercial projects, we design and deliver solar systems
               that fit your energy needs and budget.
             </p>
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D8E7F3] hover:border-[#2878B5] bg-[#F0F8FF] hover:bg-[#E4F2FC] text-[#163B5C] hover:text-[#2878B5] text-[14px] font-semibold transition-all group"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#D8E7F3] hover:border-[#0F67B1] bg-[#F5F9FD] hover:bg-[#E6F1FC] text-[#0C233C] hover:text-[#0F67B1] text-[14px] font-semibold transition-all group shadow-2xs"
             >
-              <span>Explore Our Services</span>
+              <span>Explore Our Projects</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
 
-          {/* Right Column: 4 Services Cards matching the reference layout */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Right Column: 2x2 Bento Grid of Services Cards */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {servicesData.map((service) => {
-              const Icon = service.icon;
               return (
                 <div
                   key={service.id}
                   onClick={() => setSelectedService(service)}
-                  className="group cursor-pointer flex flex-col p-5 rounded-2xl bg-[#FFFFFF] border border-[#D8E7F3] hover:border-[#2878B5] hover:bg-[#F0F8FF]/50 transition-all duration-300 hover:shadow-sm"
+                  className="group cursor-pointer flex flex-col p-6 rounded-2xl bg-[#FFFFFF] border border-[#D8E7F3] hover:border-[#0F67B1]/60 hover:bg-[#F5F9FD]/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_32px_-12px_rgba(15,103,177,0.18)]"
                 >
-                  {/* Circular badge with Lucide icon */}
-                  <div className="w-12 h-12 rounded-full bg-[#E4F2FC] group-hover:bg-[#2878B5] flex items-center justify-center mb-5 transition-colors">
-                    <Icon className="w-5 h-5 text-[#2878B5] group-hover:text-white transition-colors" />
+                  <div className="flex items-center justify-between gap-3 mb-5">
+                    <span className="font-mono text-xs font-bold text-[#0F67B1] bg-[#E6F1FC] px-2.5 py-1 rounded-md tracking-wider">
+                      {service.number}
+                    </span>
+                    <span className="text-[11px] font-semibold text-[#4A657D] bg-[#F5F9FD] border border-[#D8E7F3] px-2.5 py-1 rounded-full">
+                      {service.specs}
+                    </span>
                   </div>
 
-                  <h3 className="text-[16px] font-bold text-[#163B5C] group-hover:text-[#2878B5] transition-colors mb-2">
+                  <h3 className="font-display text-[18px] font-bold text-[#0C233C] group-hover:text-[#0F67B1] transition-colors mb-2">
                     {service.title}
                   </h3>
 
-                  <p className="text-[13px] text-[#58758E] leading-relaxed mb-4 flex-grow">
+                  <p className="text-[13.5px] text-[#4A657D] leading-relaxed mb-5 flex-grow">
                     {service.shortDesc}
                   </p>
 
-                  <div className="flex items-center text-[12px] font-semibold text-[#2878B5] pt-2 border-t border-[#D8E7F3]/60 group-hover:translate-x-0.5 transition-transform">
-                    <span>View Details</span>
-                    <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
+                  <div className="flex items-center text-[12.5px] font-semibold text-[#0F67B1] pt-3 border-t border-[#D8E7F3]/70 group-hover:translate-x-0.5 transition-transform">
+                    <span>View Specifications</span>
+                    <ChevronRight className="w-4 h-4 ml-0.5" />
                   </div>
                 </div>
               );
@@ -202,9 +205,9 @@ export default function Services({ onOpenQuote }: ServicesProps) {
           <div className="relative bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-[#D8E7F3] z-10 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-4 border-b border-[#D8E7F3]">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#E4F2FC] flex items-center justify-center">
-                  <selectedService.icon className="w-5 h-5 text-[#2878B5]" />
-                </div>
+                <span className="font-mono text-sm font-bold text-[#0F67B1] bg-[#E6F1FC] px-3 py-1.5 rounded-lg tracking-wider">
+                  {selectedService.number}
+                </span>
                 <div>
                   <h3 className="text-xl font-bold text-[#163B5C]">{selectedService.title}</h3>
                   <span className="text-xs font-medium text-[#2878B5] bg-[#E4F2FC] px-2.5 py-0.5 rounded-full">

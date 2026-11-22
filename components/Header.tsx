@@ -55,7 +55,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-[#F0F8FF]/90 backdrop-blur-md border-b border-[#D8E7F3]/80 py-3 shadow-xs"
+            ? "bg-white/85 backdrop-blur-xl border-b border-[#D8E7F3]/80 py-3 shadow-[0_4px_24px_rgba(12,35,60,0.06)]"
             : "bg-transparent py-5"
         }`}
       >
@@ -67,20 +67,20 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             </div>
 
             {/* Center: Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8 text-[14.5px] font-medium text-[#58758E]">
+            <nav className="hidden md:flex items-center space-x-8 text-[14.5px] font-medium text-[#4A657D]">
               {navLinks.map((item) => {
                 const isActive = activeSection === item.id;
                 return (
                   <a
                     key={item.label}
                     href={item.href}
-                    className={`relative py-1 transition-colors hover:text-[#163B5C] ${
-                      isActive ? "text-[#163B5C] font-semibold" : ""
+                    className={`relative py-1.5 transition-colors hover:text-[#0C233C] ${
+                      isActive ? "text-[#0C233C] font-semibold" : ""
                     }`}
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#2878B5] rounded-full" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#0F67B1] to-[#38BDF8] rounded-full" />
                     )}
                   </a>
                 );
@@ -91,7 +91,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             <div className="flex items-center gap-3">
               <button
                 onClick={onOpenQuote}
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1b5d92] hover:bg-[#2878B5] text-white text-[13.5px] font-semibold transition-all shadow-xs hover:shadow-md transform active:scale-95"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#0F5298] to-[#1D74C2] hover:from-[#0C427B] hover:to-[#155FA0] text-white text-[13.5px] font-semibold transition-all shadow-sm hover:shadow-md transform active:scale-95 group cursor-pointer"
               >
                 <span>Get a Free Quote</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -100,10 +100,10 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               {/* Hamburger Button for mobile and desktop side drawer */}
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2.5 rounded-full text-[#163B5C] hover:bg-[#E4F2FC] transition-colors"
+                className="p-2.5 rounded-full text-[#0C233C] hover:bg-[#E6F1FC] transition-colors cursor-pointer"
                 aria-label="Open menu"
               >
-                <Menu className="w-5 h-5 text-[#163B5C]" />
+                <Menu className="w-5 h-5 text-[#0C233C]" />
               </button>
             </div>
           </div>

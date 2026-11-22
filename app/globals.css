@@ -1,51 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --ice-blue: #F0F8FF;
-  --soft-blue: #E4F2FC;
-  --pale-blue: #D6EAF8;
+  --ice-blue: #F5F9FD;
+  --soft-blue: #E6F1FC;
+  --pale-blue: #D3E6F8;
   --white: #FFFFFF;
-  --primary-blue: #2878B5;
-  --primary-blue-hover: #1f659a;
-  --deep-blue: #163B5C;
-  --navy: #102D46;
-  --muted-blue: #58758E;
+  --primary-blue: #0F67B1;
+  --primary-blue-hover: #0B5290;
+  --deep-blue: #0F2E4D;
+  --navy: #0C233C;
+  --muted-blue: #4A657D;
   --border-blue: #D8E7F3;
-  --soft-green: #E8F3EC;
-  --success-green: #34815B;
-  
-  --background: #F0F8FF;
-  --foreground: #102D46;
+  --soft-green: #E6F6EE;
+  --success-green: #168052;
+  --solar-amber: #F59E0B;
+  --solar-amber-soft: #FEF3C7;
+  --solar-amber-dark: #B45309;
+
+  --background: #F5F9FD;
+  --foreground: #0C233C;
 }
 
 @theme {
-  --color-ice-blue: #F0F8FF;
-  --color-soft-blue: #E4F2FC;
-  --color-pale-blue: #D6EAF8;
-  --color-brand-primary: #2878B5;
-  --color-brand-deep: #163B5C;
-  --color-brand-navy: #102D46;
-  --color-brand-muted: #58758E;
+  --color-ice-blue: #F5F9FD;
+  --color-soft-blue: #E6F1FC;
+  --color-pale-blue: #D3E6F8;
+  --color-brand-primary: #0F67B1;
+  --color-brand-deep: #0F2E4D;
+  --color-brand-navy: #0C233C;
+  --color-brand-muted: #4A657D;
   --color-brand-border: #D8E7F3;
-  --color-soft-green: #E8F3EC;
-  --color-success-green: #34815B;
+  --color-soft-green: #E6F6EE;
+  --color-success-green: #168052;
+  --color-solar-amber: #F59E0B;
+  --color-solar-amber-soft: #FEF3C7;
+  --font-display: var(--font-display), var(--font-sans), sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #F0F8FF;
+  background-color: #F5F9FD;
 }
 
 body {
-  background-color: #F0F8FF;
+  background-color: #F5F9FD;
   color: var(--navy);
   font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   overflow-x: hidden;
 }
 
+h1, h2, h3, .font-display {
+  font-family: var(--font-display, var(--font-sans)), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 /* Custom handwriting accent */
 .font-handwriting {
-  font-family: "Brush Script MT", "Caveat", "Segoe Script", cursive;
+  font-family: var(--font-handwriting), "Caveat", cursive;
   letter-spacing: 0.02em;
 }
 

@@ -35,15 +35,15 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
       {/* Typography: "Kochuvila" and "Solars" */}
       <div className="flex flex-col text-left leading-none">
         <span
-          className={`text-[19px] font-bold tracking-tight ${
-            isLight ? "text-white" : "text-[#163B5C]"
+          className={`font-display text-[20px] font-bold tracking-tight ${
+            isLight ? "text-white" : "text-[#0C233C]"
           }`}
         >
           Kochuvila
         </span>
         <span
-          className={`text-[13px] font-medium tracking-wide mt-0.5 ${
-            isLight ? "text-[#D6EAF8]" : "text-[#58758E]"
+          className={`text-[11.5px] font-semibold uppercase tracking-[0.18em] mt-0.5 ${
+            isLight ? "text-[#93C5FD]" : "text-[#0F67B1]"
           }`}
         >
           Solars

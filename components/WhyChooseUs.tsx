@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { TrendingDown, ShieldCheck, Headset, Leaf, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 export default function WhyChooseUs() {
   const pillars = [
     {
-      icon: TrendingDown,
+      number: "01",
       title: "Energy Cost Savings",
       tagline: "Up to 90% Bill Reduction",
       desc: "Harness the power of bi-directional net metering. Any excess solar units your panels generate during sunny daylight hours are credited back to your electricity utility account.",
@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
       ],
     },
     {
-      icon: ShieldCheck,
+      number: "02",
       title: "Quality Installation",
       tagline: "Certified Wind & Water-Tight",
       desc: "We prioritize structural integrity and roof longevity above all. All railings are manufactured using anodized aluminium and hot-dip galvanized SS304 fasteners.",
@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
       ],
     },
     {
-      icon: Headset,
+      number: "03",
       title: "Reliable Support",
       tagline: "Lifetime System Care",
       desc: "Our relationship doesn't end on commissioning day. Our technical support center continuously monitors system health and schedules periodic health checkups.",
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
       ],
     },
     {
-      icon: Leaf,
+      number: "04",
       title: "Sustainable Energy",
       tagline: "Clean, Carbon-Zero Footprint",
       desc: "Every kilowatt-hour of solar energy your rooftop generates directly replaces fossil fuel combustion, significantly shrinking your carbon footprint.",
@@ -52,16 +52,16 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-us" className="py-20 lg:py-28 bg-[#F0F8FF] border-t border-[#D8E7F3]">
+    <section id="why-us" className="py-20 lg:py-28 bg-[#F5F9FD] border-t border-[#D8E7F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-[12px] font-bold tracking-[0.2em] text-[#2878B5] uppercase mb-3">
+          <div className="text-[12px] font-bold tracking-[0.2em] text-[#0F67B1] uppercase mb-3">
             The Kochuvila Difference
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#163B5C] tracking-tight">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0C233C] tracking-tight">
             Why Choose Kochuvila Solars
           </h2>
-          <p className="text-[16px] text-[#58758E] mt-3">
+          <p className="text-[16px] text-[#4A657D] mt-3">
             Engineered precision, authentic solar equipment, and customer-first care from site
             survey through the 25-year lifespan of your installation.
           </p>
@@ -69,24 +69,23 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {pillars.map((pillar, idx) => {
-            const Icon = pillar.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-8 border border-[#D8E7F3] hover:border-[#2878B5]/60 transition-all duration-300 hover:shadow-md flex flex-col justify-between"
+                className="bg-white rounded-2xl p-8 border border-[#D8E7F3] hover:border-[#0F67B1]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_-12px_rgba(12,35,60,0.12)] flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#E4F2FC] flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#2878B5]" />
-                    </div>
-                    <span className="text-xs font-bold text-[#34815B] bg-[#E8F3EC] px-3 py-1 rounded-full">
+                    <span className="font-mono text-xs font-bold text-[#0F67B1] bg-[#E6F1FC] px-3 py-1 rounded-md tracking-wider">
+                      {pillar.number}
+                    </span>
+                    <span className="text-xs font-bold text-[#168052] bg-[#E6F6EE] px-3 py-1 rounded-full">
                       {pillar.tagline}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#163B5C] mb-3">{pillar.title}</h3>
-                  <p className="text-sm text-[#58758E] leading-relaxed mb-6">{pillar.desc}</p>
+                  <h3 className="font-display text-xl font-bold text-[#0C233C] mb-3">{pillar.title}</h3>
+                  <p className="text-sm text-[#4A657D] leading-relaxed mb-6">{pillar.desc}</p>
                 </div>
 
                 <div className="space-y-2.5 pt-5 border-t border-[#D8E7F3]/70">

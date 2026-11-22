@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Phone, Mail, MapPin, ArrowRight, Sun, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, ShieldCheck } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Footer() {

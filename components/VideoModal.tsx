@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Sun, Zap, Home, RefreshCw, BatteryMedium, ArrowRight, Play } from "lucide-react";
+import { X, ArrowRight, Play } from "lucide-react";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -16,35 +16,30 @@ export default function VideoModal({ isOpen, onClose, onOpenQuote }: VideoModalP
 
   const steps = [
     {
-      icon: Sun,
       title: "1. Sunlight Harvest",
       time: "0:25",
       desc: "Solar PV panels installed on your rooftop absorb abundant solar irradiation. Our Tier-1 monocrystalline cells convert photon particles into clean Direct Current (DC) power.",
       stat: "Up to 22.8% Conversion Efficiency",
     },
     {
-      icon: Zap,
       title: "2. Precision Inversion",
       time: "0:55",
       desc: "The smart inverter instantly converts raw DC power into synchronized Alternating Current (AC) matching the exact frequency and voltage of your grid connection.",
       stat: "98.6% Inverter Conversion Rate",
     },
     {
-      icon: Home,
       title: "3. Direct Daytime Power",
       time: "1:20",
       desc: "Your home or commercial facility powers air conditioners, lighting, computers, and EV chargers directly with zero draw from the electricity grid.",
       stat: "Instant Daytime Bill Neutralization",
     },
     {
-      icon: RefreshCw,
       title: "4. Smart Net-Metering Export",
       time: "1:50",
       desc: "Any surplus electricity generated is seamlessly exported into the utility grid. Your bi-directional net-meter spins backwards, accumulating financial credits.",
       stat: "Zero Energy Wastage",
     },
     {
-      icon: BatteryMedium,
       title: "5. Night & Monsoon Continuity",
       time: "2:00",
       desc: "At night or during heavy rains, your accumulated export credits offset your usage, or hybrid battery storage seamlessly powers critical loads without flicker.",

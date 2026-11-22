@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Send, CheckCircle2, ShieldCheck, Sun } from "lucide-react";
+import { X, Send, CheckCircle2, ShieldCheck } from "lucide-react";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -48,14 +48,9 @@ export default function QuoteModal({ isOpen, onClose, presetService }: QuoteModa
       {/* Modal Dialog */}
       <div className="relative z-10 w-full max-w-lg bg-white rounded-3xl border border-[#D8E7F3] shadow-2xl p-6 sm:p-8">
         <div className="flex items-center justify-between pb-4 border-b border-[#D8E7F3]">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-[#E4F2FC] flex items-center justify-center text-[#2878B5]">
-              <Sun className="w-4 h-4" />
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-[#163B5C]">Get a Free Solar Quote</h3>
-              <p className="text-xs text-[#58758E]">Fast feasibility report & savings estimate</p>
-            </div>
+          <div>
+            <h3 className="font-display text-lg font-bold text-[#0C233C]">Get a Free Solar Quote</h3>
+            <p className="text-xs text-[#4A657D]">Fast feasibility report & savings estimate</p>
           </div>
 
           <button

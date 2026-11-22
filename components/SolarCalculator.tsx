@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Calculator, ArrowRight, Zap, PiggyBank, Trees, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface SolarCalculatorProps {
   onOpenQuoteWithEstimate: (details: { bill: number; kw: number; savings: number; type: string }) => void;
@@ -30,21 +30,20 @@ export default function SolarCalculator({ onOpenQuoteWithEstimate }: SolarCalcul
     <section id="calculator" className="py-20 lg:py-28 bg-[#FFFFFF] border-t border-[#D8E7F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4F2FC] text-[#2878B5] text-[12px] font-bold uppercase tracking-wider mb-3">
-            <Calculator className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF3C7] text-[#B45309] text-[12px] font-bold uppercase tracking-wider mb-3">
             <span>Interactive Estimator</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#163B5C] tracking-tight">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0C233C] tracking-tight">
             Calculate Your Solar Savings & ROI
           </h2>
-          <p className="text-[16px] text-[#58758E] mt-3">
+          <p className="text-[16px] text-[#4A657D] mt-3">
             Slide your average monthly electricity bill to see the recommended system capacity,
             monthly bill reduction, and 25-year financial payoff.
           </p>
         </div>
 
         {/* Calculator Main Box */}
-        <div className="max-w-5xl mx-auto rounded-3xl bg-[#F0F8FF] border border-[#D8E7F3] p-6 sm:p-10 lg:p-12 shadow-sm">
+        <div className="max-w-5xl mx-auto rounded-3xl bg-[#F5F9FD] border border-[#D8E7F3] p-6 sm:p-10 lg:p-12 shadow-[0_12px_40px_-15px_rgba(12,35,60,0.08)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left: Interactive Controls */}
             <div className="lg:col-span-6 space-y-6">
@@ -143,51 +142,51 @@ export default function SolarCalculator({ onOpenQuoteWithEstimate }: SolarCalcul
             </div>
 
             {/* Right: Calculated Yield Cards */}
-            <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 border border-[#D8E7F3] shadow-md flex flex-col justify-between">
+            <div className="lg:col-span-6 bg-gradient-to-br from-[#0C233C] to-[#13385C] text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-[#D8E7F3]">
+                <div className="flex items-center justify-between pb-4 border-b border-white/10">
                   <div>
-                    <span className="text-xs uppercase font-bold tracking-wider text-[#58758E]">
+                    <span className="text-xs uppercase font-bold tracking-wider text-[#93C5FD]">
                       Recommended Solar Plant
                     </span>
-                    <div className="text-3xl font-extrabold text-[#163B5C] mt-0.5">
+                    <div className="font-display text-3xl sm:text-4xl font-extrabold text-white mt-0.5">
                       {recommendedKW} kWp
                     </div>
                   </div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#E4F2FC] flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-[#2878B5]" />
-                  </div>
+                  <span className="px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#F59E0B]/20 text-[#FBBF24] border border-[#F59E0B]/30">
+                    Tier-1 PV
+                  </span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 my-5">
-                  <div className="p-4 rounded-xl bg-[#F0F8FF] border border-[#D8E7F3]/70">
-                    <div className="text-xs text-[#58758E] mb-1">Est. Monthly Savings</div>
-                    <div className="text-xl font-bold text-[#34815B]">
+                  <div className="p-4 rounded-xl bg-white/8 border border-white/10">
+                    <div className="text-xs text-[#BFDBFE] mb-1">Est. Monthly Savings</div>
+                    <div className="font-display text-xl sm:text-2xl font-bold text-[#34D399]">
                       ₹{estimatedMonthlySavings.toLocaleString("en-IN")}
                     </div>
-                    <div className="text-[11px] text-[#58758E] mt-0.5">
+                    <div className="text-[11px] text-[#93C5FD] mt-0.5">
                       ~₹{estimatedAnnualSavings.toLocaleString("en-IN")} / year
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#F0F8FF] border border-[#D8E7F3]/70">
-                    <div className="text-xs text-[#58758E] mb-1">25-Year Total Savings</div>
-                    <div className="text-xl font-bold text-[#163B5C]">
+                  <div className="p-4 rounded-xl bg-white/8 border border-white/10">
+                    <div className="text-xs text-[#BFDBFE] mb-1">25-Year Total Savings</div>
+                    <div className="font-display text-xl sm:text-2xl font-bold text-[#FBBF24]">
                       ₹{(lifetime25YearSavings / 100000).toFixed(1)} Lakhs
                     </div>
-                    <div className="text-[11px] text-[#58758E] mt-0.5">Adjusted for tariff rise</div>
+                    <div className="text-[11px] text-[#93C5FD] mt-0.5">Adjusted for tariff rise</div>
                   </div>
                 </div>
 
                 {/* Environmental impact */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#E8F3EC] border border-[#34815B]/30 mb-6 text-xs text-[#102D46]">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#168052]/25 border border-[#34D399]/30 mb-6 text-xs text-[#E6F6EE]">
                   <div className="flex items-center gap-2">
-                    <Trees className="w-4 h-4 text-[#34815B]" />
+                    <span className="w-2 h-2 rounded-full bg-[#34D399] shrink-0" />
                     <span>
                       Offsets <strong>{co2TonnesPerYear} tons</strong> of CO2 per year
                     </span>
                   </div>
-                  <span className="font-semibold text-[#34815B]">🌿 {treesEquivalent} Trees / yr</span>
+                  <span className="font-semibold text-[#34D399]">{treesEquivalent} Trees / yr</span>
                 </div>
               </div>
 
@@ -202,7 +201,7 @@ export default function SolarCalculator({ onOpenQuoteWithEstimate }: SolarCalcul
                     type: propertyType,
                   })
                 }
-                className="w-full py-3.5 px-6 rounded-full bg-[#2878B5] hover:bg-[#1f659a] text-white font-semibold text-sm transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] hover:from-[#FBBF24] hover:to-[#F59E0B] text-[#0C233C] font-bold text-sm transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Claim This Quote for {recommendedKW} kWp</span>
                 <ArrowRight className="w-4 h-4" />

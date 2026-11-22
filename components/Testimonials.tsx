@@ -47,13 +47,13 @@ export default function Testimonials() {
     <section className="py-20 lg:py-28 bg-[#FFFFFF] border-t border-[#D8E7F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-[12px] font-bold tracking-[0.2em] text-[#2878B5] uppercase mb-3">
+          <div className="text-[12px] font-bold tracking-[0.2em] text-[#0F67B1] uppercase mb-3">
             Real Customer Experiences
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#163B5C] tracking-tight">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0C233C] tracking-tight">
             Trusted by Homeowners & Enterprises
           </h2>
-          <p className="text-[16px] text-[#58758E] mt-3">
+          <p className="text-[16px] text-[#4A657D] mt-3">
             Read what our clients say about their transition to clean solar power and long-term
             savings with Kochuvila Solars.
           </p>
@@ -63,20 +63,20 @@ export default function Testimonials() {
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#F0F8FF] rounded-2xl p-7 border border-[#D8E7F3] flex flex-col justify-between hover:border-[#2878B5]/50 transition-colors"
+              className="bg-[#F5F9FD] rounded-2xl p-7 border border-[#D8E7F3] flex flex-col justify-between hover:border-[#0F67B1]/50 hover:-translate-y-1 hover:shadow-[0_14px_30px_-12px_rgba(12,35,60,0.12)] transition-all duration-300"
             >
               <div>
                 {/* Top Row: Stars + Quote Icon */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#2878B5] text-[#2878B5]" />
+                      <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-[#2878B5]/30" />
+                  <Quote className="w-6 h-6 text-[#0F67B1]/25" />
                 </div>
 
-                <p className="text-sm text-[#163B5C] leading-relaxed mb-6 italic">
+                <p className="text-sm text-[#0C233C] leading-relaxed mb-6 italic">
                   "{item.feedback}"
                 </p>
               </div>
