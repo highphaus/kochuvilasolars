@@ -28,15 +28,15 @@ interface Project {
 const portfolioProjects: Project[] = [
   {
     id: "coastal-villa-12kw",
-    title: "Greenfield Contemporary Villa",
+    title: "Greenfield Heritage Villa",
     category: "residential",
     categoryLabel: "Residential Solar",
     capacity: "12 kW Grid-Tied",
     location: "Kowdiar, Trivandrum",
     year: "2025",
-    image: "/project-residential.jpg",
+    image: "/kerala-residential-solar.jpg",
     summary:
-      "Full rooftop grid-tied solar system with all-black monocrystalline panels harmonized with the pitched roof aesthetics. Covers all home air conditioning and EV charging requirements.",
+      "Full rooftop grid-tied solar system with monocrystalline panels seamlessly integrated with Kerala clay-tile pitched architecture. Covers home air conditioning and EV charging requirements.",
     billReduction: "88% Monthly Bill Cut",
     co2Offset: "14.2 Tons / Year",
     systemSpecs: {
@@ -54,11 +54,11 @@ const portfolioProjects: Project[] = [
     category: "commercial",
     categoryLabel: "Commercial Solar",
     capacity: "150 kW Rooftop Array",
-    location: "Technopark Phase III",
+    location: "Technopark Phase III, Trivandrum",
     year: "2025",
-    image: "/commercial-solar.jpg",
+    image: "/kerala-commercial-solar.jpg",
     summary:
-      "Commercial non-penetrative solar deployment spanning three corporate building rooftops. Provides daylight peak power offset for server rooms, HVAC chillers, and workstation lighting.",
+      "Commercial non-penetrative solar deployment spanning IT corporate rooftops. Provides daylight peak power offset for server rooms, HVAC chillers, and workstation lighting.",
     billReduction: "72% Peak Tariff Cut",
     co2Offset: "185 Tons / Year",
     systemSpecs: {
@@ -94,15 +94,15 @@ const portfolioProjects: Project[] = [
   },
   {
     id: "modern-residence-8kw",
-    title: "Skyline Eco Residence",
+    title: "Skyline Kerala Villa",
     category: "residential",
     categoryLabel: "Residential Solar",
     capacity: "8 kW Rooftop Solar",
     location: "Kollam Beach Road",
     year: "2025",
-    image: "/hero-solar-home.jpg",
+    image: "/hero-kerala-solar.jpg",
     summary:
-      "Coastal-grade corrosion-resistant solar system engineered to withstand maritime salty air and high humidity. Powers a 4-bedroom villa with smart battery storage for power cuts.",
+      "Contemporary Kerala villa with sloping tile architecture and elevated solar array. Engineered to withstand maritime salty air and heavy Kerala monsoon rains.",
     billReduction: "92% Grid Reliance Reduced",
     co2Offset: "9.8 Tons / Year",
     systemSpecs: {
@@ -118,11 +118,11 @@ const portfolioProjects: Project[] = [
     category: "water-heating",
     categoryLabel: "Solar Water Heating",
     capacity: "2,000 LPD Central System",
-    location: "Kumarakom",
+    location: "Kumarakom Backwaters",
     year: "2024",
-    image: "/solar-water-heater.jpg",
+    image: "/kerala-resort-solar.jpg",
     summary:
-      "Centralized pressurized solar water heating system providing piping-hot water to 28 luxury cottages and resort spa without consuming electricity or LPG gas.",
+      "Centralized solar energy installation providing hot water and green electricity to luxury cottages and resort spa without consuming grid electricity or LPG gas.",
     billReduction: "100% Water Heating Power Replaced",
     co2Offset: "22 Tons / Year",
     systemSpecs: {

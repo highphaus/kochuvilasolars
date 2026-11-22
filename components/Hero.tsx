@@ -132,7 +132,7 @@ export default function Hero({ onOpenQuote, onOpenVideo }: HeroProps) {
               <video
                 ref={videoRef}
                 src="/hero-solar.mp4"
-                poster="/hero-solar-home.jpg"
+                poster="/hero-kerala-solar.jpg"
                 autoPlay
                 muted
                 loop

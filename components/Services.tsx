@@ -31,7 +31,7 @@ const servicesData: ServiceItem[] = [
     ],
     specs: "3 kW to 15 kW Systems",
     idealFor: "Individual Homes, Villas, and Apartments",
-    image: "/project-residential.jpg",
+    image: "/kerala-residential-solar.jpg",
   },
   {
     id: "commercial",
@@ -48,7 +48,7 @@ const servicesData: ServiceItem[] = [
     ],
     specs: "20 kW to 250 kW Systems",
     idealFor: "Offices, Hospitals, Educational Campuses, Retail Malls",
-    image: "/commercial-solar.jpg",
+    image: "/kerala-commercial-solar.jpg",
   },
   {
     id: "industrial",
@@ -82,7 +82,7 @@ const servicesData: ServiceItem[] = [
     ],
     specs: "100 LPD to 5,000+ LPD Capacities",
     idealFor: "Bungalows, Boutique Resorts, Hostels, and Clinics",
-    image: "/solar-water-heater.jpg",
+    image: "/kerala-resort-solar.jpg",
   },
 ];
 
