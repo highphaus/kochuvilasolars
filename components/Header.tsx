@@ -97,10 +97,10 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </button>
 
-              {/* Hamburger Button for mobile and desktop side drawer */}
+              {/* Hamburger Button for mobile only (hidden on desktop) */}
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2.5 rounded-full text-[#0C233C] hover:bg-[#E6F1FC] transition-colors cursor-pointer"
+                className="md:hidden p-2.5 rounded-full text-[#0C233C] hover:bg-[#E6F1FC] transition-colors cursor-pointer"
                 aria-label="Open menu"
               >
                 <Menu className="w-5 h-5 text-[#0C233C]" />

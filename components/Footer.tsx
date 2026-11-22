@@ -128,7 +128,7 @@ export default function Footer() {
               <div className="pt-2">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2878B5] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#38BDF8] hover:text-white transition-colors"
                 >
                   <span>Request Free Site Inspection</span>
                   <ArrowRight className="w-3.5 h-3.5" />
